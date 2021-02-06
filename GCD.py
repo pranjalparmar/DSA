@@ -1,11 +1,11 @@
-def GCD(a,b):
-    if b == 0:
-        return a
-    else:
-        return GCD(b,a%b)
+a, b = [int(i) for i in input().split()]
 
 
+def computeGCD(a, b):
+    while (b):
+        a, b = b, a % b
 
-a = int(input())
-b = int(input())
-print(GCD(a,b))
+    return a
+
+
+print(computeGCD(a, b))
